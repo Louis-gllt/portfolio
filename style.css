@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+header {
+  background-color: white;
+  padding: 30px 60px 30px 60px;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #1f2039;
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}

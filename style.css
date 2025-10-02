@@ -5,9 +5,13 @@
 }
 
 header {
-  background-color: white;
   padding: 30px 60px 30px 60px;
   margin: 15px;
+  border-radius: 15px;
+  font-size: 150%;
+  color: rgb(250, 82, 82);
+  text-decoration: underline dotted red;
+  background-color: rgb(74, 20, 221, 30%);
 }
 
 body {
@@ -22,20 +26,13 @@ a {
   text-decoration: none;
 }
 
-.bvn {
-  font-size: 150%;
-  color: rgb(250, 82, 82);
-  text-decoration: underline dotted red;
-  background-color: rgb(74, 20, 221, 30%);
-}
-
 .me {
   font-size: 200%;
   width: 42%;
   margin-top: 70px;
   margin-left: 15px;
   border-radius: 15px;
-  background-color: rgb(74, 20, 221, 30%);
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 15px 15px 15px 35px;
   color: rgb(247, 231, 231);
 }
@@ -46,7 +43,7 @@ a {
   margin-top: 70px;
   margin-left: 15px;
   border-radius: 15px;
-  background-color: rgb(74, 20, 221, 30%);
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 15px 15px 15px 35px;
   color: rgb(247, 231, 231);
 }
@@ -57,11 +54,17 @@ button{
   border: none;
   box-shadow: 2px;
   margin: 20px 15px 20px 15px;
+  width: 200px;
+  height: 200px;
+}
+
+.button_img{
+  width: 100%;
 }
 
 button:hover{
   background-color: rgb(255, 255, 255, 40%);
-  transform: scale(1.05);
+  transform: scale(1.10);
 }
 
 .me:hover{

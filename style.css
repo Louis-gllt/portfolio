@@ -1,19 +1,79 @@
 * {
   margin: 0;
+  cursor: default;
+  font-family: 'Manrope', sans-serif;
 }
 
 header {
   background-color: white;
   padding: 30px 60px 30px 60px;
+  margin: 15px;
 }
 
 body {
   font-family: 'Manrope', sans-serif;
   font-size: 1em;
-  background-color: #1f2039;
+  background: radial-gradient(circle,rgba(42, 42, 155, 1) 0%, rgb(121, 88, 212) 100%);
+  text-align: center;
 }
 
 a {
   color: #242424;
   text-decoration: none;
+}
+
+.bvn {
+  font-size: 150%;
+  color: rgb(250, 82, 82);
+  text-decoration: underline dotted red;
+  background-color: rgb(74, 20, 221, 30%);
+}
+
+.me {
+  font-size: 200%;
+  width: 42%;
+  margin-top: 70px;
+  margin-left: 15px;
+  border-radius: 15px;
+  background-color: rgb(74, 20, 221, 30%);
+  padding: 15px 15px 15px 35px;
+  color: rgb(247, 231, 231);
+}
+
+.projets {
+  font-size: 150%;
+  width: auto;
+  margin-top: 70px;
+  margin-left: 15px;
+  border-radius: 15px;
+  background-color: rgb(74, 20, 221, 30%);
+  padding: 15px 15px 15px 35px;
+  color: rgb(247, 231, 231);
+}
+
+button{
+  background-color: rgba(125, 53, 219, 0.849);
+  border-radius: 35px;
+  border: none;
+  box-shadow: 2px;
+  margin: 20px 15px 20px 15px;
+}
+
+button:hover{
+  background-color: rgb(255, 255, 255, 40%);
+  transform: scale(1.05);
+}
+
+.me:hover{
+  background-color: rgb(255, 255, 255, 40%);
+  color: black;
+}
+
+a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button:active{
+  transform: rotate(0.5turn);
 }

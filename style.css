@@ -5,20 +5,25 @@
 }
 
 header {
-  padding: 30px 60px 30px 60px;
-  margin: 15px;
+  /* padding: 30px 60px 30px 60px; */
+  font-family: 'Montserrat', sans-serif;
+  margin: auto;
+  margin-bottom: 75px;
+  margin-top: 50px;
+  max-width: 400px;
   border-radius: 15px;
-  font-size: 150%;
-  color: rgb(250, 82, 82);
-  text-decoration: underline dotted red;
-  background-color: rgb(74, 20, 221, 30%);
+  font-size: 1.5em;
+  color: black;
+  text-decoration: underline dotted black;
+  /* background-color: rgb(74, 20, 221, 30%); */
 }
 
 body {
   font-family: 'Manrope', sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   background: radial-gradient(circle,rgba(42, 42, 155, 1) 0%, rgb(121, 88, 212) 100%);
   text-align: center;
+  padding: 10px;
 }
 
 a {
@@ -27,47 +32,57 @@ a {
 }
 
 .me {
-  font-size: 200%;
-  margin: 70px 15px 70px 15px;
+  font-size: 1.2em;
+  margin: auto;
+  max-width: 900px;
+  margin-bottom: 50px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.3);
-  padding: 15px 15px 15px 35px;
+  padding: 5px;
   color: rgb(247, 231, 231);
 }
 
 .projets {
   font-size: 150%;
-  width: auto;
-  margin: 70px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: auto;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.3);
-  padding: 15px 15px 15px 35px;
+  padding: 15px;
   color: rgb(247, 231, 231);
 }
 
 button{
   background-color: rgba(125, 53, 219, 0.849);
-  border-radius: 35px;
+  border-radius: 10%;
   border: none;
-  box-shadow: 5px 5px 5px rgb(0, 0, 0, 50%);
-  margin: 20px 15px 20px 15px;
-  width: 200px;
-  height: 200px;
+  box-shadow: 5px 5px 5px rgba(12, 11, 11, 0.5);
+  margin: 20px;
+  width: 23%;
+  height: 23%;
 }
 
-.button_img{
+button img{
   width: 100%;
 }
+
+/* header:hover{
+  background-color: rgb(250, 82, 82);
+  color: rgb(74, 20, 221, 30%);
+  text-decoration: underline dotted rgb(74, 20, 221, 30%);
+} */
 
 button:hover{
   background-color: rgb(255, 255, 255, 40%);
   transform: scale(1.10);
 }
 
-.me:hover{
+/* .me:hover{
   background-color: rgb(255, 255, 255, 40%);
   color: black;
-}
+} */
 
 a:hover{
   cursor: pointer;

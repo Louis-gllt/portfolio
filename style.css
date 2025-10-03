@@ -28,9 +28,7 @@ a {
 
 .me {
   font-size: 200%;
-  width: 42%;
-  margin-top: 70px;
-  margin-left: 15px;
+  margin: 70px 15px 70px 15px;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 15px 15px 15px 35px;

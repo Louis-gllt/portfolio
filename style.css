@@ -5,7 +5,6 @@
 }
 
 header {
-  /* padding: 30px 60px 30px 60px; */
   font-family: 'Montserrat', sans-serif;
   margin: auto;
   margin-bottom: 75px;
@@ -18,12 +17,11 @@ header {
   border-bottom-left-radius: 0%;
   border-bottom-right-radius: 0%;
   border-width: 0.1em;
-  /* background-color: rgb(74, 20, 221, 30%); */
 }
 
 body {
   font-family: 'Manrope', sans-serif;
-  background: radial-gradient(circle,rgba(42, 42, 155, 1) 0%, rgb(148, 124, 215) 100%);
+  background: radial-gradient(circle, rgba(42, 42, 155, 1) 0%, rgb(148, 124, 215) 100%);
   text-align: center;
   padding: 10px;
 }
@@ -54,54 +52,58 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 15px;
   color: rgb(247, 231, 231);
-
 }
 
-button{
+.projets_button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
   background-color: rgba(125, 53, 219, 0.849);
   border-radius: 10%;
   border: none;
   box-shadow: 5px 5px 5px rgba(12, 11, 11, 0.5);
-  margin: 20px;
-  width: 23%;
-  height: 23%;
+  margin: 10px;
+  flex: 0 1 200px; /* <= largeur de base 200px, mais flexible */
 }
 
-button img{
+button img {
   width: 100%;
+  object-fit: contain;
 }
 
-.projets_button{
-  flex-wrap: wrap;
-}
-footer{
+footer {
   font-family: 'Montserrat', sans-serif;
   text-align: left;
-  padding: auto;
   padding-top: 20px;
 }
 
-/* header:hover{
-  background-color: rgb(250, 82, 82);
-  color: rgb(74, 20, 221, 30%);
-  text-decoration: underline dotted rgb(74, 20, 221, 30%);
-} */
-
-button:hover{
+button:hover {
   background-color: rgb(255, 255, 255, 40%);
   transform: scale(1.10);
 }
 
-/* .me:hover{
-  background-color: rgb(255, 255, 255, 40%);
-  color: black;
-} */
-
-a:hover{
+a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-button:active{
+button:active {
   transform: rotate(0.5turn);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .me, .projets {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  button {
+    flex: 1 1 100%; /* un bouton par ligne sur petit écran */
+    max-width: 300px;
+  }
 }

@@ -30,7 +30,7 @@ a {
   color: #242424;
   text-decoration: none;
 }
-
+  
 .me {
   font-size: 1.5em;
   margin: auto;
@@ -95,7 +95,7 @@ button:active {
   transform: rotate(0.5turn);
 }
 
-/* --- Responsive --- */
+/* --- Responsive ChatGPT --- */
 @media (max-width: 600px) {
   .me, .projets {
     font-size: 1.2em;

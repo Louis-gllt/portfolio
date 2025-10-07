@@ -17,6 +17,7 @@ header {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-width: 0.1em;
+  animation: slideInLeftFade 1s ease-out 1;
 }
 
 body {
@@ -46,6 +47,8 @@ hr {
   color: rgb(247, 231, 231);
   border: 5px black;
   box-shadow: 5px 5px 5px rgba(12, 11, 11, 0.5);
+  animation: slideInRightFade 1s ease-out 1;
+  /* animation: scaleFadeSlideInUp 1s ease-in-out 1; */
 }
 
 .projets {
@@ -60,6 +63,7 @@ hr {
   color: rgb(247, 231, 231);
   box-shadow: 5px 5px 5px rgba(12, 11, 11, 0.5);
   margin-bottom: 50px;
+  animation: slideUpFadeScale 1s ease-out 1;
 }
 
 .projets_button {
@@ -89,6 +93,10 @@ hr {
   gap: 20px;
 }
 
+.contact_button:hover{
+  animation: pulseRotate 1s ease-in-out infinite;
+}
+
 .contact button{
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 20% 10% 20% 10%;
@@ -101,7 +109,7 @@ button {
   border: none;
   box-shadow: 5px 5px 5px rgba(12, 11, 11, 0.5);
   margin: 10px;
-  flex: 0 1 200px; /* <= largeur de base 200px, mais flexible */
+  flex: 0 1 200px;
 }
 
 button img {
@@ -118,6 +126,7 @@ footer {
 button:hover {
   background-color: rgb(255, 255, 255, 40%);
   transform: scale(1.10);
+  animation: pulseGlow 1.5s ease-in-out infinite;
 }
 
 a:hover {
@@ -140,4 +149,39 @@ button:active {
     flex: 1 1 100%; /* un bouton par ligne sur petit écran */
     max-width: 300px;
   }
+}
+
+
+/* Tests CSS */
+
+@keyframes scaleFadeSlideInUp {
+          0% { transform: scale(0.5) translateY(300%); opacity: 0; } 30% { transform: scale(0.7) translateY(0); opacity: 0.7; } 100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+@keyframes slideInLeftFade {
+      0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRightFade {
+      0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0%); opacity: 1; }
+}
+
+@keyframes pulseRotate {
+      0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(10deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes pulseGlow {
+          0% { transform: scale(1); box-shadow: 0 0 5px rgba(0, 89, 255, 0.5); } 
+          50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(0, 183, 255, 0.9); } 
+          100% { transform: scale(1); box-shadow: 0 0 5px rgba(0, 89, 255, 0.5); }
+}
+
+@keyframes slideUpFadeScale {
+      0% { transform: translateY(100%) scale(0.8); opacity: 0; }
+    50% { transform: translateY(-10px) scale(1.1); opacity: 0.5; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
 }

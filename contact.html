@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Louis Guilleminot</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+   (function(){emailjs.init("VOTRE_USER_ID");})();
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">Louis Guilleminot</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <h1>Contactez-moi</h1>
+  <p>Pour toute question ou demande de site web, envoyez-moi un message directement ici.</p>
+</header>
+
+<main>
+<section class="section">
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 — <a href="mailto:louis.guilleminot@epita.fr">louis.guilleminot@epita.fr</a></p>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event){
+    event.preventDefault();
+    emailjs.sendForm('VOTRE_SERVICE_ID','VOTRE_TEMPLATE_ID', this)
+    .then(() => alert('Message envoyé avec succès !'), 
+          (err) => alert('Erreur : ' + JSON.stringify(err)));
+});
+</script>
+
+</body>
+</html>

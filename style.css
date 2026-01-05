@@ -292,3 +292,21 @@ footer a:hover {
   .projects-grid { grid-template-columns: 1fr; }
   .nav-links { gap: 30px; }
 }
+
+/* ===================== ANIMATIONS SCROLL ===================== */
+.section, header {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible, header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header a déjà une animation, celle-ci permettra de l'anim quand on refresh */
+header.visible h1, header.visible p {
+  opacity: 1;
+  transform: translateY(0);
+}

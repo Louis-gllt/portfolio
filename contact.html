@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Louis Guilleminot</title>
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-   (function(){emailjs.init("VOTRE_USER_ID");})();
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -47,9 +44,32 @@
 <script>
 document.getElementById('contact-form').addEventListener('submit', function(event){
     event.preventDefault();
-    emailjs.sendForm('VOTRE_SERVICE_ID','VOTRE_TEMPLATE_ID', this)
-    .then(() => alert('Message envoyé avec succès !'), 
-          (err) => alert('Erreur : ' + JSON.stringify(err)));
+
+    emailjs.sendForm(
+        'service_xl1h159',
+        'template_ppi4jco',
+        this,
+        { publicKey: 'm_MZR2VUoxfBIvv0E' }
+    ).then(
+        () => alert('Message envoyé avec succès !'),
+        err => alert('Erreur : ' + err.text)
+    );
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll('.section, header');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 });
 </script>
 
